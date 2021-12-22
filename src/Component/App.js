@@ -1,6 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
-import TodoList from 'ToolList';
+import logo from '../logo.svg';
+import '../style/App.css';
+import TodoList from './ToolList';
 function App() {
   let items = [
     {

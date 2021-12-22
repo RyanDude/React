@@ -1,5 +1,5 @@
 import React from 'react'
-function ToolList(props){
+function ToDoList(props){
     const {title, items} = props;
     return(
         <div className="todolist">
@@ -18,4 +18,4 @@ function ToolList(props){
         </div>
     );
 }
-export default ToolList;
+export default ToDoList;
