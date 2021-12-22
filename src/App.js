@@ -1,24 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
-
+import TodoList from 'ToolList';
 function App() {
+  let items = [
+    {
+      id: 1,
+      text: 'Learn Javascript',
+      completed: false
+    },
+    {
+      id: 2,
+      text: 'Learn React',
+      completed: false
+    },
+    {
+      id: 3,
+      text: 'Build a React App',
+      completed: false
+    }
+  ];
+  let title = 'Things to do';
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="container">
+        <div className="row">
+          <TodoList title={title} items={items} />
+        </div>
+      </div>
   );
 }
 
