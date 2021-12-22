@@ -1,19 +1,19 @@
 import React from 'react'
+import Header from "./Header";
+import TodoItem from "./TodoItem";
 function ToDoList(props){
     const {title, items} = props;
+    let arr = ['joker','sucker','asdasd'];
     return(
         <div className="todolist">
-            <h1>{title.toUpperCase()}</h1>
+            <Header title={title}/>
             <ul className="list-unstyled">
-                {items.map(item => (
-                    <li key={item.id} className="ui-state-default">
-                        <div className="checkbox">
-                            <label>
-                                <input type="checkbox" value=""/> {item.text}
-                            </label>
-                        </div>
-                    </li>
-                ))}
+                {items.map(item => <TodoItem key={item.id} data={item}/>)}
+            </ul>
+            <ul className="list-unstyled">
+                {arr.map(function (index,value) {
+                    return <li key={index}>{arr[value]}</li>
+                })}
             </ul>
         </div>
     );
